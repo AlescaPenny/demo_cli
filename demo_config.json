@@ -1,0 +1,82 @@
+{
+    "model": [
+        {
+            "distribution": "const",
+            "name": "num_layers",
+            "value": 4
+        },
+        {
+            "distribution": "const",
+            "name": "activation",
+            "value": "None"
+        },
+        {
+            "distribution": "const",
+            "name": "num_classes",
+            "value": 10
+        }
+    ],
+    "trainer": [
+        {
+            "distribution": "uniform",
+            "lower": 0.005,
+            "name": "lr",
+            "upper": 4
+        },
+        {
+            "distribution": "randint",
+            "lower": 2,
+            "name": "epochs",
+            "upper": 4
+        },
+        {
+            "distribution": "const",
+            "name": "optimizer",
+            "value": "adam"
+        },
+        {
+            "distribution": "const",
+            "name": "losses",
+            "value": "crossentropy"
+        },
+        {
+            "distribution": "const",
+            "name": "batch_size",
+            "value": 2
+        },
+        {
+            "distribution": "const",
+            "name": "shuffle",
+            "value": "True"
+        }
+    ],
+    "trialer": [
+        {
+            "distribution": "const",
+            "name": "samples",
+            "value": 5
+        },
+        {
+            "distribution": "const",
+            "name": "stop",
+            "value": {
+                "training_iteration": 10
+            }
+        },
+        {
+            "distribution": "const",
+            "name": "metric",
+            "value": "accuracy"
+        },
+        {
+            "distribution": "const",
+            "name": "framework",
+            "value": "keras"
+        },
+        {
+            "distribution": "const",
+            "name": "search_algorithm",
+            "value": ""
+        }
+    ]
+}
